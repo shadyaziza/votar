@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		nXmoO2UHxDwsfX2bbHEFsXDA4DY=
+		lNXZ62R55EOoPQuOtF8Svg3Qzc8=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		VRtPqPW/gJX7Z4jA5XAOV6Avyd8=
+		JhPgxG2RKO32cy8qDHiYyMOyho4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		MibU/VNZ4E2CSpHErOEKuUQQpbE=
+		pFa26dyU5qAMDUA4+vMpi5gYAIo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		wxcXVAlrRWqCw8KKcH1aECpiUc4=
+		bXS0h9i8P/KVaF+qcgkL0gwfqos=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/design_system/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
 		<data>
@@ -288,21 +288,9 @@
 		<data>
 		iqxdhxDOeG6GKBcMhgGCL00SLGw=
 		</data>
-		<key>Frameworks/path_provider_foundation.framework/Info.plist</key>
-		<data>
-		XwmV1NXddfhYerBTlsXHpEgCV8o=
-		</data>
-		<key>Frameworks/path_provider_foundation.framework/_CodeSignature/CodeResources</key>
-		<data>
-		J5zJ9HKafakKwbZLHBjHvTLNxVk=
-		</data>
-		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
-		<data>
-		ZAShN1lWc1HKKD/yGr0OGtKlB9c=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		GCbEe/EqjDBYFwvNAx2ldSaP258=
+		D+87GbMhj2xR47caS0SSZ5rPGeE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -385,7 +373,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/8nlDVEg3es/yrCt3BhWMeowaRbv5mtxnJr5v87A9U=
+			byRp3PRlAM6//9FkgInPFi7TAcKlMeZXbdG6V6at/LM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -399,7 +387,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ETUlxDJduV955l3JxLn7Btfp422/Q5jH0XZwTpc91tE=
+			nbj3wpeo5tcu8hX4NUAug1vVibVp68x51cjAQ7Rvrx8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -420,7 +408,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aNVjsbHHVgpc/kmxLB1vQmJlNFtj0eqSLtykZh4mwxo=
+			OS4RZgzVmwEKoJ03/jQL+s+HB376w+ReSCel7+PVWiM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
@@ -483,7 +471,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMK/lQnbjweuO/IXfrRONobgpDUE9U//UTWlEMkH4NY=
+			l4qQlYXFmGg2fHqX1nYA629EE29aHwDCGvlG8zLFVOU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/design_system/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
@@ -806,27 +794,6 @@
 			<key>hash2</key>
 			<data>
 			d80FTlJMKYsTn7JmRt/E1O9oOh+k9tF0xR10Q3ZrKn4=
-			</data>
-		</dict>
-		<key>Frameworks/path_provider_foundation.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xxl2571wIdhmx9DR44qwE5GbZRakvesHfh6fzKtOe7s=
-			</data>
-		</dict>
-		<key>Frameworks/path_provider_foundation.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oOuDxsOKfblP4Pob8vrqmvEtXAacEnDICn6OGURk4I8=
-			</data>
-		</dict>
-		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			5GUxJgm4yqLZfHQ3t3ogqO9GE6aeHILJfgXSy3YMmzk=
 			</data>
 		</dict>
 	</dict>

@@ -1,7 +1,9 @@
 import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:votar/src/features/theme_switcher/presentation/features.dart';
+import 'package:votar/src/localization/localization.dart';
 
 void main() {
   runApp(
@@ -17,7 +19,12 @@ class VotarApp extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final themeMode = ref.watch(themeSiwtcherControllerPod);
+    final loc = ref.watch(appLocalizationsPod);
+    final locale = ref.watch(localeStatePod);
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: locale,
       themeMode: themeMode.mode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
@@ -36,9 +43,7 @@ class VotarApp extends HookConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text(
-                    'Get Started',
-                  ),
+                  child: Text(loc.getStarted),
                 ),
               )
             ],
