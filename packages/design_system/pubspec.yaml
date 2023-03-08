@@ -1,0 +1,35 @@
+name: design_system
+description: package contains ui elements
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flex_color_scheme: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: BalooBhaijaan2
+      fonts:
+        - asset: assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf
+        - asset: assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-SemiBold.ttf
+          weight: 700
+        - asset: assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-ExtraBold.ttf
+          weight: 900
