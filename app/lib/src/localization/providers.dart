@@ -6,21 +6,22 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'providers.g.dart';
 
-@Riverpod(keepAlive: true)
-AppLocalizations appLocalizations(AppLocalizationsRef ref) {
-  // 1. initialize from the initial locale
-  ref.state = lookupAppLocalizations(ui.window.locale);
-  // 2. create an observer to update the state
-  final observer = _LocaleObserver((locales) {
-    ref.state = lookupAppLocalizations(ui.window.locale);
-  });
-  // 3. register the observer and dispose it when no longer needed
-  final binding = WidgetsBinding.instance;
-  binding.addObserver(observer);
-  ref.onDispose(() => binding.removeObserver(observer));
-  // 4. return the state
-  return ref.state;
-}
+// @Riverpod(keepAlive: true)
+// AppLocalizations appLocalizations(AppLocalizationsRef ref) {
+//   // 1. initialize from the initial locale
+//   ref.state = lookupAppLocalizations(ui.window.locale);
+//   // 2. create an observer to update the state
+//   final observer = _LocaleObserver((locales) {
+//     ref.state = lookupAppLocalizations(ui.window.locale);
+//   });
+//   // 3. register the observer and dispose it when no longer needed
+//   final binding = WidgetsBinding.instance;
+//   binding.addObserver(observer);
+//   ref.onDispose(() => binding.removeObserver(observer));
+//   // 4. return the state
+
+//   return ref.state;
+// }
 
 class _LocaleObserver extends WidgetsBindingObserver {
   _LocaleObserver(this._didChangeLocales);
@@ -32,17 +33,31 @@ class _LocaleObserver extends WidgetsBindingObserver {
 }
 
 @Riverpod(keepAlive: true)
-class LocaleState extends _$LocaleState {
+class AppLocalizationsController extends _$AppLocalizationsController {
   @override
-  Locale build() {
-    return const Locale('en');
+  AppLocalizations build() {
+    // 1. initialize from the initial locale
+    state = lookupAppLocalizations(ui.window.locale);
+    // 2. create an observer to update the state
+    final observer = _LocaleObserver((locales) {
+      state = lookupAppLocalizations(ui.window.locale);
+    });
+    // 3. register the observer and dispose it when no longer needed
+    final binding = WidgetsBinding.instance;
+    binding.addObserver(observer);
+    ref.onDispose(() => binding.removeObserver(observer));
+    // 4. return the state
+
+    return state;
   }
 
   void setLocale(Locale locale) {
     List<Locale> supportedLocales = AppLocalizations.supportedLocales;
 
     if (supportedLocales.contains(locale)) {
-      state = locale;
+      state = lookupAppLocalizations(locale);
     }
   }
+
+  String get currentLanguageName => (state as AppLocalizations).localeName;
 }

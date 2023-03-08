@@ -2,7 +2,7 @@ import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:votar/src/features/theme_switcher/presentation/features.dart';
+import 'package:votar/src/features/features.dart';
 import 'package:votar/src/localization/localization.dart';
 
 void main() {
@@ -19,12 +19,14 @@ class VotarApp extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final themeMode = ref.watch(themeSiwtcherControllerPod);
-    final loc = ref.watch(appLocalizationsPod);
-    final locale = ref.watch(localeStatePod);
+    final loc = ref.watch(appLocalizationsControllerPod);
+    final langName = ref.watch(appLocalizationsControllerPod
+        .select((value) => (value as AppLocalizations).localeName));
+
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: locale,
+      locale: Locale(langName),
       themeMode: themeMode.mode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
@@ -34,9 +36,9 @@ class VotarApp extends HookConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Align(
-                alignment: Alignment.topLeft,
-                child: ThemeSwitcher(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [ThemeSwitcher(), ChangeLocaleWidget()],
               ),
               const Spacer(),
               Padding(
