@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		oORlqOQF8uB3mDXRX6YMfGRJmvw=
+		nXmoO2UHxDwsfX2bbHEFsXDA4DY=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,19 +54,19 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ypUb5grfktJVRB/vSPg+h9rgC8c=
+		VRtPqPW/gJX7Z4jA5XAOV6Avyd8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		2ILZt8gwxHv70F0CSig84nLi0rE=
+		jZc/bM7C5KTeicJWi545bKySVig=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		ew2JYUVtTekwrZS+yGdytSk5zIo=
+		SDfvxmhdGGPCrjnsdY2qxP7RU0E=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		omj2Gj8/xhf5e/cbSFmi8OquHtc=
+		MibU/VNZ4E2CSpHErOEKuUQQpbE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		S0JYmeVpDM01IAOEnA/itMVK0uQ=
+		wxcXVAlrRWqCw8KKcH1aECpiUc4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/design_system/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
 		<data>
@@ -127,6 +127,74 @@
 		<key>Frameworks/App.framework/flutter_assets/packages/design_system/assets/fonts/Baloo_Bhaijaan_2/static/BalooBhaijaan2-SemiBold.ttf</key>
 		<data>
 		rBzES+fB2HYlYR3aJD6eN90EHIU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/AntDesign.ttf</key>
+		<data>
+		TneGhDkoD7Q01Gl8e5EScUBsgfM=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Entypo.ttf</key>
+		<data>
+		R4cKZ91Qhxdl95nKqX2ochnuR8U=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/EvilIcons.ttf</key>
+		<data>
+		kdN36jz0dJCyVsLtCBcEp9q9rgw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Feather.ttf</key>
+		<data>
+		Um4D6mimHEpnpwsB17NF6rNJdn0=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome.ttf</key>
+		<data>
+		E7HqtlqYPHpzvHmXxHnWaUP3xss=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Brands.ttf</key>
+		<data>
+		Zshu39E+Y+Dpgc6FMzXCi8LSDOw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Regular.ttf</key>
+		<data>
+		APVp99isJJekOyXcTTsyITvOoxs=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Solid.ttf</key>
+		<data>
+		/483360QV5a9kk0NsNN6T/JSYYw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Fontisto.ttf</key>
+		<data>
+		wJCj7Jaj8bubYVwvPyBM4Nzc28M=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Foundation.ttf</key>
+		<data>
+		SyvObHkkk6SlcWtv7C2+/olJLD8=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Ionicons.ttf</key>
+		<data>
+		tSgfv6QxKavD5BLdk4z88Ld96Zk=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/MaterialCommunityIcons.ttf</key>
+		<data>
+		gKQx1tSYYdZVAJ6UkUCSgtJVlZE=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/MaterialIcons.ttf</key>
+		<data>
+		GUOAPWUnUMjsYEFfHldAHHDnLSU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Octicons.ttf</key>
+		<data>
+		KIdYdEE1A7zAgQ6ipE3BuDEsZlo=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/SimpleLineIcons.ttf</key>
+		<data>
+		n/uBpaEREuKS8swyPphIa61ZdZk=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Zocial.ttf</key>
+		<data>
+		C9pZx7zT05J94EfgkYdaRCi/0as=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/weathericons.ttf</key>
+		<data>
+		mRbj28OZDjBzz1ostMLpWCc7dTI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -234,7 +302,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D+87GbMhj2xR47caS0SSZ5rPGeE=
+		GCbEe/EqjDBYFwvNAx2ldSaP258=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -317,7 +385,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gsZMAgG4gcZdbZI7qve96PBDigTuvXeP367EOC4RJfs=
+			T/8nlDVEg3es/yrCt3BhWMeowaRbv5mtxnJr5v87A9U=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -331,28 +399,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hAYONE8KQSeMMwy2y3/v+3HCP+yLh6QKZ5x3PR1KzGg=
+			ETUlxDJduV955l3JxLn7Btfp422/Q5jH0XZwTpc91tE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hJ3WFHK6hblfqZmhlPQai1UJ7yHilY0VY0idYstIu8Y=
+			6vXVVLvsW1FVNpdRifIX8wPwkhsxtEt1n5bSogIvYJ8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kT8bTaFubDm9fwi7PZBIQbK2nN8+VkNxPLdfZZIrNJg=
+			PIWSi5oPiVEdvky7txTR8LcCUHuOqOEY1S8a0sTgbB0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fHkGrLyWyJYdPvalzvE/Pp/zqCJEsmxzF6rIH5idtb4=
+			aNVjsbHHVgpc/kmxLB1vQmJlNFtj0eqSLtykZh4mwxo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
@@ -415,7 +483,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			35V+fsDl8FH8zXjxUFDTBc5CWFlI5GEOZFDmDIXlkxY=
+			XMK/lQnbjweuO/IXfrRONobgpDUE9U//UTWlEMkH4NY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/design_system/assets/fonts/Baloo_Bhaijaan_2/BalooBhaijaan2-VariableFont_wght.ttf</key>
@@ -458,6 +526,125 @@
 			<key>hash2</key>
 			<data>
 			cZT4YGwU+AzF+U5rErwQzu1JjVZce/7qsT2nW0rAlnU=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/AntDesign.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eVXKFBJ7MEEsEU6xPP1wK12rJl/rGIDRaV1zyqgkzeE=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Entypo.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3QhJoVkfiNp5N7I/kiQYpc7FTgdeCePMyo/rYgFvqoI=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/EvilIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pcrrTTlcXjLx1aMKyzgq68Zk8brf0UkxmQfyIV5OPiY=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Feather.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RtQXlhv1OBMGa9LExQGx+R+SVg01HG18MeJ9xp7A7cc=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qljzPyOaD7AvXHpsRcBD16msmgkzNYBmlOzW1O3A1qg=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Brands.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oMFFOCrP5Zdn0Uh9ZQXzSWZbaFwohc2RtiHRQaKSsPg=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8yuUopBg3+wMeXod/hETV+sdaC8aykrEuVzw9MPiv6k=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/FontAwesome5_Solid.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ix1ozvvGhG+3jK/KhGdAGk83HiJkGGYuiQDj1SrcAKs=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Fontisto.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lNq58dWxPqB2nRJKLaDQJDPzuZ1t6loHwERqdxWBAMA=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Foundation.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fh3QPdTOkLZYBSVUzXRZ3xZxZxc4mlUvpMbVal+JM+Y=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Ionicons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7rACslkR31LsyqT1swN3jtf0ipsHhSYwVR6fFcxwnzM=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/MaterialCommunityIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			biEyi7cPCdqSjAM95zaIItliUKHM0qFqb0fedqPMYb0=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/MaterialIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xrFho4+y/siypSIlLQPJBzVc2RvMKOGd/dpfM1q+8Fg=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Octicons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ua3cE7d8ZyDNSM0Y8PSoyuWJsbkQNjDCSd5gq3Lf1r4=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/SimpleLineIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P1Ad2wXHCCm7tRz+nKn/9X854GBFfCV7PM8l33Z/CHA=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/Zocial.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			17EKHr4YMOWi8I9JA7moDiwZEsDdL3O5P88r+DIhZgI=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/flutter_font_icons/fonts/weathericons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F2vaZmHyE93kfCEU125HbsjKmq4H3VT5VQ0tKP4CtP0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>

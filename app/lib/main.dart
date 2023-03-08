@@ -1,6 +1,7 @@
 import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:votar/src/features/theme_switcher/presentation/features.dart';
 
 void main() {
   runApp(
@@ -10,13 +11,14 @@ void main() {
   );
 }
 
-class VotarApp extends StatelessWidget {
+class VotarApp extends HookConsumerWidget {
   const VotarApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final themeMode = ref.watch(themeSiwtcherControllerPod);
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: themeMode.mode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       home: Scaffold(
@@ -25,6 +27,10 @@ class VotarApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              const Align(
+                alignment: Alignment.topLeft,
+                child: ThemeSwitcher(),
+              ),
               const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
