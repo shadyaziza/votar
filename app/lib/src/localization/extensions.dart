@@ -9,6 +9,8 @@ extension LocaleX on Locale {
         return 'GB';
       case 'es':
         return 'ES';
+      case 'ko':
+        return 'KR';
       default:
         throw UnimplementedError('$languageCode is not supported yet');
     }
@@ -22,6 +24,8 @@ extension LocaleX on Locale {
         return 'English';
       case 'es':
         return 'Español';
+      case 'ko':
+        return '한국인';
       default:
         throw UnimplementedError('$languageCode is not supported yet');
     }

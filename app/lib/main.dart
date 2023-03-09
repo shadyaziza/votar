@@ -47,11 +47,32 @@ class VotarApp extends HookConsumerWidget {
                 children: const [ThemeSwitcher(), ChangeLocaleWidget()],
               ),
               const Spacer(),
+              Center(
+                child: Text(
+                  'Votar',
+                  style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                        fontWeight: FontWeight.w900,
+                        color: themeMode.mode == ThemeMode.dark
+                            ? Colors.white54
+                            : Colors.black54,
+                      ),
+                ),
+              ),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(loc.startPolling),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text(loc.startPolling),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(loc.joinAnActivePoll),
+                    ),
+                  ],
                 ),
               )
             ],

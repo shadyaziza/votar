@@ -16,8 +16,8 @@ class AppTheme {
         ),
       );
   static ThemeData get darkTheme => FlexThemeData.dark(
-        scheme: FlexScheme.damask,
         fontFamily: fontFamily,
+        scheme: FlexScheme.damask,
       );
 }
 

@@ -1,3 +1,5 @@
 {
-    "startPolling":"Start polling"
+    "startPolling":"Start polling",
+
+    "joinAnActivePoll":"Join an active poll"
 }
