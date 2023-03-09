@@ -77,5 +77,8 @@ class AppLocalizationsController extends _$AppLocalizationsController {
     ref.read(utilityCachePod).cacheLanguage(locale: locale);
   }
 
-  String get currentLanguageName => (state as AppLocalizations).localeName;
+  /// Helper method to compare other to [state] language name
+  ///
+  bool isSameLocale(String languageName) =>
+      (state as AppLocalizations).localeName == languageName;
 }

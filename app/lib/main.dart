@@ -51,7 +51,7 @@ class VotarApp extends HookConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text(loc.getStarted),
+                  child: Text(loc.startPolling),
                 ),
               )
             ],

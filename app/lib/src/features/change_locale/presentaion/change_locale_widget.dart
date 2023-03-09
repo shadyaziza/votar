@@ -19,21 +19,22 @@ class ChangeLocaleWidget extends HookConsumerWidget {
                     .read(appLocalizationsControllerPod.notifier)
                     .setLocale(locale),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(locale.languageCode.toUpperCase()),
-                    const Spacer(),
                     AppFlag.fromString(locale.flagCode, height: 20, width: 20),
+                    const SizedBox(
+                      width: 32,
+                    ),
+                    Text(locale.uiString),
                     const Spacer(),
-                    if (locale.languageCode ==
-                        ref
-                            .read(appLocalizationsControllerPod.notifier)
-                            .currentLanguageName) ...{
-                      Icon(
-                        AppIcons.checkMark,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                    }
+                    Icon(
+                      AppIcons.checkMark,
+                      color: ref
+                              .read(appLocalizationsControllerPod.notifier)
+                              .isSameLocale(locale.languageCode)
+                          ? Theme.of(context).primaryColor
+                          : Colors.transparent,
+                    ),
                   ],
                 ),
               ),
