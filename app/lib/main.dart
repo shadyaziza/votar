@@ -30,6 +30,7 @@ class VotarApp extends HookConsumerWidget {
         .select((value) => (value as AppLocalizations).localeName));
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(langName),
