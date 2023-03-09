@@ -1,3 +1,4 @@
+import 'package:caching/utility.dart';
 import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -5,10 +6,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:votar/src/features/features.dart';
 import 'package:votar/src/localization/localization.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final sharedPrefInstance = await sharedPreferencesInstance;
+
   runApp(
-    const ProviderScope(
-      child: VotarApp(),
+    ProviderScope(
+      overrides: [sharedPreferencesPod.overrideWithValue(sharedPrefInstance)],
+      child: const VotarApp(),
     ),
   );
 }
