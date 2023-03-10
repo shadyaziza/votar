@@ -5,24 +5,8 @@ orbs:
   flutter: circleci/flutter@2.0.0
 
 workflows:
-    analyze-workflow:
-      jobs:
-        - flutter/lint:
-            version: '3.7.3' 
-            app-dir: app/ 
-
-
-# jobs:
-#   build-and-test:
-#     macos:
-#       xcode: 14.2.0
-#     steps:
-#       # ...
-#       - run: bundle exec fastlane test
-
-#   adhoc:
-#     macos:
-#       xcode: 14.2.0
-#     steps:
-#       # ...
-#       - run: bundle exec fastlane adhoc
+  analyze-workflow:
+    jobs:
+      - flutter/lint:
+          version: "3.7.3"
+          app-dir: app/
