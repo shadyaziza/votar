@@ -5,9 +5,10 @@ orbs:
   flutter: circleci/flutter@2.0.0
 
 workflows:
-    example-workflow:
+    analyze-workflow:
       jobs:
         - flutter/lint:
+            version: '3.7.3' 
             app-dir: app/ 
 
 
