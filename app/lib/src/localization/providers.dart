@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' as ui;
 
 import 'package:caching/utility.dart';
@@ -18,8 +19,8 @@ class _LocaleObserver extends WidgetsBindingObserver {
 
 @Riverpod(keepAlive: true)
 class AppLocalizationsController extends _$AppLocalizationsController {
-  /// Checks if user has saved a preferred language before, if true load user choice
-  /// otherwise load system default
+  /// Checks if user has saved a preferred language before, if true load user
+  /// choice otherwise load system default
   ///
   @override
   AppLocalizations build() {
@@ -45,10 +46,10 @@ class AppLocalizationsController extends _$AppLocalizationsController {
     return state;
   }
 
-  /// Sets the locale of choice in memory and then saves it in application storage
-  /// by calling [_cache]
+  /// Sets the locale of choice in memory and then saves it in application
+  /// storage by calling [_cache]
   void setLocale(Locale locale) {
-    List<Locale> supportedLocales = AppLocalizations.supportedLocales;
+    const supportedLocales = AppLocalizations.supportedLocales;
 
     if (supportedLocales.contains(locale)) {
       state = lookupAppLocalizations(locale);
@@ -56,8 +57,8 @@ class AppLocalizationsController extends _$AppLocalizationsController {
     }
   }
 
-  _cache(Locale locale) {
-    ref.read(utilityCachePod).cacheLanguage(locale: locale);
+  void _cache(Locale locale) {
+    unawaited(ref.read(utilityCachePod).cacheLanguage(locale: locale));
   }
 
   /// Helper method to compare other to [state] language name
