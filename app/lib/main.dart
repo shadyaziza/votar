@@ -3,7 +3,9 @@ import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 
+import 'src/core/logger/logger.dart';
 import 'src/core/router/router.dart';
 import 'src/features/features.dart';
 import 'src/localization/localization.dart';
@@ -15,7 +17,14 @@ Future<void> main() async {
 
   runApp(
     ProviderScope(
-      overrides: [sharedPreferencesPod.overrideWithValue(sharedPrefInstance)],
+      observers: [
+        StateObserver(
+          logger: TalkerLogger(),
+        ),
+      ],
+      overrides: [
+        sharedPreferencesPod.overrideWithValue(sharedPrefInstance),
+      ],
       child: const VotarApp(),
     ),
   );
