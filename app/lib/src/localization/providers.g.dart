@@ -7,7 +7,7 @@ part of 'providers.dart';
 // **************************************************************************
 
 String _$appLocalizationsControllerHash() =>
-    r'5cd79df78000e94b3832c5cd3493e300f3b315ae';
+    r'5359ee956c1b2b4b185f36cdfbde901a79f066ca';
 
 /// See also [AppLocalizationsController].
 @ProviderFor(AppLocalizationsController)

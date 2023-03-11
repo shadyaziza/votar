@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'src/core/router/router.dart';
 import 'src/features/features.dart';
 import 'src/localization/localization.dart';
 
@@ -26,14 +27,15 @@ class VotarApp extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeSiwtcherControllerPod);
-    final loc = ref.watch(appLocalizationsControllerPod) as AppLocalizations;
     final langName = ref.watch(
       appLocalizationsControllerPod.select(
         (value) => (value as AppLocalizations).localeName,
       ),
     );
+    final router = ref.watch(appRouter);
 
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
@@ -41,49 +43,6 @@ class VotarApp extends HookConsumerWidget {
       themeMode: themeMode.mode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: Scaffold(
-        body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [ThemeSwitcher(), ChangeLocaleWidget()],
-              ),
-              const Spacer(),
-              Center(
-                child: Text(
-                  'Votar',
-                  style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                        fontWeight: FontWeight.w900,
-                        color: themeMode.mode == ThemeMode.dark
-                            ? Colors.white54
-                            : Colors.black54,
-                      ),
-                ),
-              ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text(loc.startPolling),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(loc.joinAnActivePoll),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
