@@ -16,7 +16,7 @@ class _LocaleObserver extends WidgetsBindingObserver {
 }
 
 /// We do not use `riverpod_generator` here because it is unable
-/// to strongly type [AppLocalizations]
+/// to strongly type `AppLocalizations`
 ///
 final appLocalizationsControllerPod =
     NotifierProvider<AppLocalizationsController, AppLocalizations>(
@@ -68,7 +68,7 @@ class AppLocalizationsController extends Notifier<AppLocalizations> {
     unawaited(ref.read(utilityCachePod).cacheLanguage(locale: locale));
   }
 
-  /// Helper method to compare other to [state] language name
+  /// Helper method to compare other to `state` language name
   ///
   bool isSameLocale(String languageName) => state.localeName == languageName;
 

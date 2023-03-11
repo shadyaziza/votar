@@ -6,13 +6,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 part 'utility_cache.g.dart';
 
-/// Single instance of [SharedPreferences]
+/// Single instance of `SharedPreferences`
 ///
 @Riverpod(keepAlive: true)
 SharedPreferences sharedPreferences(SharedPreferencesRef ref) =>
     throw UnimplementedError();
 
-/// Single instance of [SharedPreferences] controls
+/// Single instance of `SharedPreferences` controls
 /// [Cachable] types
 ///
 @Riverpod(keepAlive: true)
@@ -33,7 +33,7 @@ enum Cachable {
 /// depening on [Cachable] types
 ///
 class UtilityCache {
-  /// [UtilityCache] depends on [SharedPreferences]
+  /// [UtilityCache] depends on `SharedPreferences'
   ///
   UtilityCache({
     required this.sharedPreferences,
@@ -73,7 +73,7 @@ class UtilityCache {
 }
 
 /// Global getter to be used in app main function
-/// acts as a single instance to [SharedPreferences]
+/// acts as a single instance to `[SharedPreferences
 ///
 Future<SharedPreferences> get sharedPreferencesInstance async =>
     SharedPreferences.getInstance();
