@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_dynamic_calls
-
 part of app_router;
 
 class HomeScreen extends HookConsumerWidget {

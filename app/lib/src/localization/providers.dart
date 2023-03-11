@@ -6,8 +6,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'providers.g.dart';
-
 class _LocaleObserver extends WidgetsBindingObserver {
   _LocaleObserver(this._didChangeLocales);
   final void Function(List<Locale>? locales) _didChangeLocales;
@@ -17,8 +15,17 @@ class _LocaleObserver extends WidgetsBindingObserver {
   }
 }
 
-@Riverpod(keepAlive: true)
-class AppLocalizationsController extends _$AppLocalizationsController {
+/// We do not use `riverpod_generator` here because it is unable
+/// to strongly type [AppLocalizations]
+///
+final appLocalizationsControllerPod =
+    NotifierProvider<AppLocalizationsController, AppLocalizations>(
+  () {
+    return AppLocalizationsController();
+  },
+);
+
+class AppLocalizationsController extends Notifier<AppLocalizations> {
   /// Checks if user has saved a preferred language before, if true load user
   /// choice otherwise load system default
   ///
@@ -63,6 +70,10 @@ class AppLocalizationsController extends _$AppLocalizationsController {
 
   /// Helper method to compare other to [state] language name
   ///
-  bool isSameLocale(String languageName) =>
-      (state as AppLocalizations).localeName == languageName;
+  bool isSameLocale(String languageName) => state.localeName == languageName;
+
+  /// Helper method to get the current locale
+  /// mainly used in root app
+  ///
+  Locale get currentLocale => Locale(state.localeName);
 }

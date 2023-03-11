@@ -27,19 +27,17 @@ class VotarApp extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeSiwtcherControllerPod);
-    final langName = ref.watch(
-      appLocalizationsControllerPod.select(
-        (value) => (value as AppLocalizations).localeName,
-      ),
-    );
+
     final router = ref.watch(appRouter);
+
+    ref.watch(appLocalizationsControllerPod);
 
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale(langName),
+      locale: ref.read(appLocalizationsControllerPod.notifier).currentLocale,
       themeMode: themeMode.mode,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
