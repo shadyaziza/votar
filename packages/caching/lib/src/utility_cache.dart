@@ -33,7 +33,7 @@ enum Cachable {
 /// depening on [Cachable] types
 ///
 class UtilityCache {
-  /// [UtilityCache] depends on `SharedPreferences'
+  /// [UtilityCache] depends on `SharedPreferences`
   ///
   UtilityCache({
     required this.sharedPreferences,
@@ -73,7 +73,7 @@ class UtilityCache {
 }
 
 /// Global getter to be used in app main function
-/// acts as a single instance to `[SharedPreferences
+/// acts as a single instance to `SharedPreferences`
 ///
 Future<SharedPreferences> get sharedPreferencesInstance async =>
     SharedPreferences.getInstance();
