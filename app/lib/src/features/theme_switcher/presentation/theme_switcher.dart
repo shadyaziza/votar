@@ -31,7 +31,7 @@ class ThemeSiwtcherController extends _$ThemeSiwtcherController {
   }
 
   /// Siwtches the seem in memeory and also calls [_cache] which will
-  /// save user's [ThemeMode] pref to app storge
+  /// save user's `ThemeMode` pref to app storge
   ///
   void toggle() {
     switch (state) {
