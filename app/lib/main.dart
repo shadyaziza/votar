@@ -18,9 +18,7 @@ Future<void> main() async {
   runApp(
     ProviderScope(
       observers: [
-        StateObserver(
-          logger: TalkerLogger(),
-        ),
+        StateObserver(logger: TalkerLogger()),
       ],
       overrides: [
         sharedPreferencesPod.overrideWithValue(sharedPrefInstance),
