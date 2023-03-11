@@ -3,8 +3,9 @@ import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:votar/src/features/features.dart';
-import 'package:votar/src/localization/localization.dart';
+
+import 'src/features/features.dart';
+import 'src/localization/localization.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,11 +24,14 @@ class VotarApp extends HookConsumerWidget {
   const VotarApp({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeSiwtcherControllerPod);
-    final loc = ref.watch(appLocalizationsControllerPod);
-    final langName = ref.watch(appLocalizationsControllerPod
-        .select((value) => (value as AppLocalizations).localeName));
+    final loc = ref.watch(appLocalizationsControllerPod) as AppLocalizations;
+    final langName = ref.watch(
+      appLocalizationsControllerPod.select(
+        (value) => (value as AppLocalizations).localeName,
+      ),
+    );
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:caching/utility.dart';
 import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
@@ -44,10 +46,12 @@ class ThemeSiwtcherController extends _$ThemeSiwtcherController {
     _cache();
   }
 
-  _cache() {
-    ref
-        .read(utilityCachePod)
-        .cacheThemeMode(isdark: state.mode == ThemeMode.dark);
+  void _cache() {
+    unawaited(
+      ref
+          .read(utilityCachePod)
+          .cacheThemeMode(isdark: state.mode == ThemeMode.dark),
+    );
   }
 }
 
@@ -55,7 +59,7 @@ class ThemeSwitcher extends HookConsumerWidget {
   const ThemeSwitcher({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final mode = ref.watch(themeSiwtcherControllerPod);
     return IconButton(
       icon: Icon(mode.icon),

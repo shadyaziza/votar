@@ -1,28 +1,46 @@
+import 'dart:async';
+
 import 'package:flutter/widgets.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'utility_cache.g.dart';
 
+/// Single instance of [SharedPreferences]
+///
 @Riverpod(keepAlive: true)
 SharedPreferences sharedPreferences(SharedPreferencesRef ref) =>
     throw UnimplementedError();
 
+/// Single instance of [SharedPreferences] controls
+/// [Cachable] types
+///
 @Riverpod(keepAlive: true)
 UtilityCache utilityCache(UtilityCacheRef ref) =>
     UtilityCache(sharedPreferences: ref.read(sharedPreferencesPod));
 
 /// All simple cachable types that do not require secure storage
 ///
-enum Cachable { theme, locale }
+enum Cachable {
+  /// App storage key for user theme pref
+  theme,
 
-/// [UtilityCache] houses all simple caching operations depening on [Cachable] types
+  /// App storage key for user locale pref
+  locale
+}
+
+/// [UtilityCache] houses all simple caching operations
+/// depening on [Cachable] types
 ///
 class UtilityCache {
+  /// [UtilityCache] depends on [SharedPreferences]
+  ///
   UtilityCache({
     required this.sharedPreferences,
   });
 
+  /// Used from [sharedPreferencesPod]
+  ///
   final SharedPreferences sharedPreferences;
 
   /// Helper getter to get saved theme mode
@@ -34,8 +52,8 @@ class UtilityCache {
 
   /// Utility function to save dark mode for true and light mode for false
   ///
-  void cacheThemeMode({required bool isdark}) {
-    sharedPreferences.setBool(Cachable.theme.name, isdark);
+  Future<void> cacheThemeMode({required bool isdark}) async {
+    sharedPreferences.setBool(Cachable.theme.name, isdark).ignore();
   }
 
   /// Helper getter to get saved language
@@ -47,8 +65,10 @@ class UtilityCache {
 
   /// Utility function to save dark mode for true and light mode for false
   ///
-  void cacheLanguage({required Locale locale}) {
-    sharedPreferences.setString(Cachable.locale.name, locale.languageCode);
+  Future<void> cacheLanguage({required Locale locale}) async {
+    sharedPreferences
+        .setString(Cachable.locale.name, locale.languageCode)
+        .ignore();
   }
 }
 
@@ -56,4 +76,4 @@ class UtilityCache {
 /// acts as a single instance to [SharedPreferences]
 ///
 Future<SharedPreferences> get sharedPreferencesInstance async =>
-    await SharedPreferences.getInstance();
+    SharedPreferences.getInstance();
