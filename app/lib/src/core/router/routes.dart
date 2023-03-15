@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/features.dart';
 import 'router.dart';
 
 part 'routes.g.dart';
@@ -36,5 +37,18 @@ class OtherScreenRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return OtherScreen(id: id.toString());
+  }
+}
+
+@TypedGoRoute<OnboardingScreenRoute>(
+  path: '/welcome',
+)
+@immutable
+class OnboardingScreenRoute extends GoRouteData {
+  static String get name => 'OnboardingScreenRoute';
+  static String get path => '/welcome';
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const OnboardingScreen();
   }
 }

@@ -1,2 +1,3 @@
-export 'change_locale/presentaion/change_locale_widget.dart';
-export 'theme_switcher/presentation/theme_switcher.dart';
+export 'change_locale/change_locale.dart';
+export 'onboarding/onboarding.dart';
+export 'theme_switcher/theme_switcher.dart';

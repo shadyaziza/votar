@@ -1,5 +1,9 @@
 {
     "startPolling":"Empezar a sondear",
 
-    "joinAnActivePoll":"Únase a una votación activa"
+    "joinAnActivePoll":"Únase a una votación activa",
+
+    "onboardingFirstStatement":"Votar le permite crear y compartir encuestas con sus amigos, colegas y seguidores. Haga cualquier pregunta y obtenga comentarios instantáneos de su red",
+
+    "next":"Próxima"
 }

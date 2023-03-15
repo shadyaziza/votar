@@ -20,6 +20,7 @@ final appRouter = Provider<GoRouter>(
     return GoRouter(
       debugLogDiagnostics: true,
       routes: $appRoutes,
+      initialLocation: OnboardingScreenRoute.path,
       redirect: notifier._redirect,
       errorBuilder: (context, state) => Scaffold(
         appBar: AppBar(),

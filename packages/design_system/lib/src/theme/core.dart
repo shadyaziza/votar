@@ -10,14 +10,17 @@ class AppTheme {
   static String get fontFamily => 'BalooBhaijaan2';
   static ThemeData get lightTheme => FlexThemeData.light(
         fontFamily: fontFamily,
-        scheme: FlexScheme.damask,
-        scaffoldBackground: const Color(
-          0xffE8D5B5,
-        ),
+        // scheme: FlexScheme.deepPurple,
+        // scheme: FlexScheme.damask,
+        scheme: FlexScheme.bahamaBlue,
+        scaffoldBackground: Colors.grey.shade100,
       );
   static ThemeData get darkTheme => FlexThemeData.dark(
         fontFamily: fontFamily,
-        scheme: FlexScheme.damask,
+        // scheme: FlexScheme.damask,
+        // scheme: FlexScheme.deepPurple,
+        scaffoldBackground: Colors.grey.shade900,
+        scheme: FlexScheme.bahamaBlue,
       );
 }
 

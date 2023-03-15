@@ -1,5 +1,10 @@
 {
     "startPolling":"Start polling",
 
-    "joinAnActivePoll":"Join an active poll"
+    "joinAnActivePoll":"Join an active poll",
+
+    "onboardingFirstStatement":"Votar that lets you create and share polls with your friends, collegues and followers. Ask any question and get instant feedback from your network",
+
+    "next": "Next"
+
 }

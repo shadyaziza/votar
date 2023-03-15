@@ -1,5 +1,9 @@
 {
     "startPolling":"폴링 시작",
     
-    "joinAnActivePoll":"활성 투표에 참여"
+    "joinAnActivePoll":"활성 투표에 참여",
+
+    "onboardingFirstStatement":"Votar를 사용하면 친구, 동료 및 팔로워와 투표를 만들고 공유할 수 있습니다. 질문을 하고 네트워크에서 즉각적인 피드백을 받으세요.",
+
+    "next":"다음"
 }

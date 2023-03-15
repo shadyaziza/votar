@@ -8,6 +8,7 @@ part of 'routes.dart';
 
 List<GoRoute> get $appRoutes => [
       $homeScreenRoute,
+      $onboardingScreenRoute,
     ];
 
 GoRoute get $homeScreenRoute => GoRouteData.$route(
@@ -43,6 +44,27 @@ extension $OtherScreenRouteExtension on OtherScreenRoute {
 
   String get location => GoRouteData.$location(
         '/other/${Uri.encodeComponent(id.toString())}',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  void push(BuildContext context) => context.push(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+}
+
+GoRoute get $onboardingScreenRoute => GoRouteData.$route(
+      path: '/welcome',
+      factory: $OnboardingScreenRouteExtension._fromState,
+    );
+
+extension $OnboardingScreenRouteExtension on OnboardingScreenRoute {
+  static OnboardingScreenRoute _fromState(GoRouterState state) =>
+      OnboardingScreenRoute();
+
+  String get location => GoRouteData.$location(
+        '/welcome',
       );
 
   void go(BuildContext context) => context.go(location);
