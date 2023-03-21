@@ -3,6 +3,7 @@ import 'package:design_system/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 import 'src/core/logger/logger.dart';
@@ -12,7 +13,11 @@ import 'src/localization/localization.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Supabase.initialize(
+    url: 'https://srpfdzvxmiejplhjnppi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNycGZkenZ4bWllanBsaGpucHBpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3OTM1NDUzOSwiZXhwIjoxOTk0OTMwNTM5fQ.9XTWkO6-ZsNT7oIa70Dmz5Ae89LnIFsgT1vFtMW81KU',
+  );
+  final supabase = Supabase.instance.client;
   final sharedPrefInstance = await sharedPreferencesInstance;
 
   runApp(
