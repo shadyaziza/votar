@@ -42,7 +42,9 @@ class HomeScreen extends HookConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        CreatePollScreenRoute().go(context);
+                      },
                       child: Text(loc.startPolling),
                     ),
                     TextButton(

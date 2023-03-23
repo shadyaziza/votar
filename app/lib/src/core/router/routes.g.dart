@@ -9,6 +9,7 @@ part of 'routes.dart';
 List<GoRoute> get $appRoutes => [
       $homeScreenRoute,
       $onboardingScreenRoute,
+      $createPollScreenRoute,
     ];
 
 GoRoute get $homeScreenRoute => GoRouteData.$route(
@@ -65,6 +66,27 @@ extension $OnboardingScreenRouteExtension on OnboardingScreenRoute {
 
   String get location => GoRouteData.$location(
         '/welcome',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  void push(BuildContext context) => context.push(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+}
+
+GoRoute get $createPollScreenRoute => GoRouteData.$route(
+      path: '/create',
+      factory: $CreatePollScreenRouteExtension._fromState,
+    );
+
+extension $CreatePollScreenRouteExtension on CreatePollScreenRoute {
+  static CreatePollScreenRoute _fromState(GoRouterState state) =>
+      CreatePollScreenRoute();
+
+  String get location => GoRouteData.$location(
+        '/create',
       );
 
   void go(BuildContext context) => context.go(location);
