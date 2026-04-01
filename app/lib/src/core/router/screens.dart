@@ -42,7 +42,9 @@ class HomeScreen extends HookConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        const CreatePollScreenRoute().go(context);
+                      },
                       child: Text(loc.startPolling),
                     ),
                     TextButton(
@@ -71,6 +73,22 @@ class OtherScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Text(id),
+      ),
+    );
+  }
+}
+
+class CreatePollScreen extends StatelessWidget {
+  const CreatePollScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children:const [TextField(
+          minLines: 1,
+          maxLines: 5,
+        )],
       ),
     );
   }

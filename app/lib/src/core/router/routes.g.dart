@@ -18,6 +18,10 @@ GoRoute get $homeScreenRoute => GoRouteData.$route(
           path: 'other/:id',
           factory: $OtherScreenRouteExtension._fromState,
         ),
+        GoRouteData.$route(
+          path: 'create-poll',
+          factory: $CreatePollScreenRouteExtension._fromState,
+        ),
       ],
     );
 
@@ -44,6 +48,21 @@ extension $OtherScreenRouteExtension on OtherScreenRoute {
   String get location => GoRouteData.$location(
         '/other/${Uri.encodeComponent(id.toString())}',
       );
+
+  void go(BuildContext context) => context.go(location);
+
+  void push(BuildContext context) => context.push(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+}
+
+extension $CreatePollScreenRouteExtension on CreatePollScreenRoute {
+  static CreatePollScreenRoute _fromState(GoRouterState state) => CreatePollScreenRoute();
+
+  String get location => GoRouteData.$location(
+    '/create-poll',
+  );
 
   void go(BuildContext context) => context.go(location);
 

@@ -10,6 +10,9 @@ part 'routes.g.dart';
   routes: [
     TypedGoRoute<OtherScreenRoute>(
       path: 'other/:id',
+    ),
+    TypedGoRoute<CreatePollScreenRoute>(
+      path: '/create-poll',
     )
   ],
 )
@@ -36,5 +39,18 @@ class OtherScreenRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return OtherScreen(id: id.toString());
+  }
+}
+
+@immutable
+class CreatePollScreenRoute extends GoRouteData {
+  static String get name => 'CreatePollScreenRoute';
+  static String get path => 'create-poll';
+
+  const CreatePollScreenRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const CreatePollScreen();
   }
 }
